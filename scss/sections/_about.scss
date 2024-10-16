@@ -1,0 +1,6 @@
+@use '../partials/colors';
+
+.about-section {
+  color: colors.$sunlit-leaf;
+  background-color: colors.$deep-forest;
+}

@@ -1,0 +1,57 @@
+@use '../partials/colors';
+
+header {
+  height: 100vh;
+  width: 100%;
+
+  position: relative;
+  background-image: url('../../assets/forest.jpg');
+  background-size: cover;
+  background-position: center;
+  &::after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+  nav {
+    height: 5vh;
+    padding-top: 10px;
+    padding-left: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1em;
+    a {
+      z-index: 2;
+      color: colors.$foggy-light;
+      text-decoration: none;
+      &:hover {
+        color: colors.$sunlit-leaf;
+        transform: scale(1.05);
+      }
+    }
+  }
+  h1,
+  h2 {
+    z-index: 2;
+    color: colors.$foggy-light;
+  }
+  h1 {
+    font-size: 5em;
+  }
+  h2 {
+    font-size: 3em;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+  }
+}

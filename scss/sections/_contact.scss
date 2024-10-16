@@ -1,0 +1,55 @@
+@use '../partials/colors';
+
+.contact-section {
+  background-color: colors.$bark-brown;
+  color: colors.$foggy-light;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3em;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-items: center;
+    gap: 1em;
+    min-width: 60%;
+    input,
+    textarea {
+      color: colors.$bark-brown;
+      background-color: colors.$foggy-light;
+
+      border: none;
+      border-radius: 5px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 2em;
+      width: 100%;
+    }
+
+    .field__vertical {
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+
+  button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: colors.$shadow-green;
+    color: colors.$foggy-light;
+    &:hover {
+      transform: scale(1.1);
+      background-color: colors.$deep-forest;
+    }
+  }
+}
