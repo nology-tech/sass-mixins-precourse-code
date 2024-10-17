@@ -1,36 +1,32 @@
 @use '../partials/colors';
+@use '../partials/mixins';
 
 .contact-section {
-  background-color: colors.$bark-brown;
-  color: colors.$foggy-light;
+  // background-color: colors.$bark-brown;
+  // color: colors.$foggy-light;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  @include mixins.colors(colors.$bark-brown, colors.$foggy-light);
+  @include mixins.flex(column);
   align-items: center;
   gap: 3em;
 
   .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    @include mixins.flex(column);
     align-items: center;
     gap: 1em;
     min-width: 60%;
     input,
     textarea {
-      color: colors.$bark-brown;
-      background-color: colors.$foggy-light;
+      // color: colors.$bark-brown;
+      // background-color: colors.$foggy-light;
+      @include mixins.colors(colors.$foggy-light, colors.$bark-brown);
 
       border: none;
       border-radius: 5px;
     }
 
     .field {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
+      @include mixins.flex;
       gap: 2em;
       width: 100%;
     }

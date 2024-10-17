@@ -365,8 +365,8 @@ header section {
 }
 
 .about-section {
-  color: #a4c2a8;
   background-color: #1a2421;
+  color: #a4c2a8;
 }
 
 .contact-section {
@@ -383,14 +383,13 @@ header section {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  align-items: center;
   gap: 1em;
   min-width: 60%;
 }
 .contact-section .form input,
 .contact-section .form textarea {
-  color: #3d2b1f;
   background-color: #d9e6e0;
+  color: #3d2b1f;
   border: none;
   border-radius: 5px;
 }

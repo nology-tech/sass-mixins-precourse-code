@@ -1,30 +1,15 @@
 @use '../partials/colors';
+@use '../partials/mixins';
 
 header {
-  height: 100vh;
-  width: 100%;
+  @include mixins.full-screen;
+  @include mixins.bg-with-overlay('../../assets/forest.jpg');
 
-  position: relative;
-  background-image: url('../../assets/forest.jpg');
-  background-size: cover;
-  background-position: center;
-  &::after {
-    content: '';
-    top: 0;
-    left: 0;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.35);
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-  }
   nav {
     height: 5vh;
     padding-top: 10px;
     padding-left: 2em;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    @include mixins.flex;
     gap: 1em;
     a {
       z-index: 2;
@@ -48,10 +33,7 @@ header {
     font-size: 3em;
   }
   section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include mixins.content-center;
     height: 95vh;
   }
 }
